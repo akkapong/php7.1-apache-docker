@@ -42,4 +42,3 @@ RUN wget https://phar.phpunit.de/phpunit-6.2.phar -O /usr/local/bin/phpunit && \
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-php
