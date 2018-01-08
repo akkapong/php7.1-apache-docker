@@ -38,9 +38,11 @@ RUN mv composer.phar /usr/local/bin/composer
 RUN wget https://phar.phpunit.de/phpunit-6.2.phar -O /usr/local/bin/phpunit && \
     chmod +x /usr/local/bin/phpunit
 
+# add mod rewrite
+RUN a2enmod rewrite
+
 # Clean repository
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-#add mod rewrite
-RUN a2enmod rewrite
+
