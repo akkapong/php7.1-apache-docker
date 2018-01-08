@@ -42,3 +42,5 @@ RUN wget https://phar.phpunit.de/phpunit-6.2.phar -O /usr/local/bin/phpunit && \
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+#add mod rewrite
+RUN a2enmod rewrite
